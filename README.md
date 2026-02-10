@@ -1,6 +1,5 @@
 # Hevy MCP Server
 
-[![UPSTRM](https://www.upstrm.dev/api/badge/1?token=e96df95c-557d-46c2-8b15-bc87af4b88a4)](https://www.upstrm.dev/server/1/hevy-mcp-server)
 
 A Model Context Protocol (MCP) server that connects to the official Hevy API and exposes workout data to AI assistants. Supports dual transport modes: stdio for Claude Desktop and SSE for remote access (e.g., Poke.com).
 
