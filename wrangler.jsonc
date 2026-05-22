@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hevy-mcp-server",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "limits": {
+    "cpu_ms": 50
+  },
+  "migrations": [
+    {
+      "new_sqlite_classes": ["MyMCP"],
+      "tag": "v1"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "class_name": "MyMCP",
+        "name": "MCP_OBJECT"
+      }
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "0d9e617c51ff4f11b0b2e4160a8bdfc0"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
