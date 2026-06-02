@@ -56,6 +56,7 @@ export function createSSETransport(
   config: SSETransportConfig
 ): express.Application {
   const app = express();
+  app.set('trust proxy', 1);
   const isProduction = process.env.NODE_ENV === 'production';
   const sessionTimeout = config.sessionTimeout || 30 * 24 * 60 * 60 * 1000; // 30 days default
 
